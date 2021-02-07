@@ -1,4 +1,6 @@
 
+![Versioning](image/versioning.png)
+
 # Source Control Management (SCM)
 
 Source control management (or an interchangeable term "version control") has made a surge of collaborative work and software delivery increasingly rapid. It is now standard in software development to maintain a single source of truth for development teams, which allows multiple developers to work on the same codebase. Git, as a leader outclassing other SCM tools, is obligatory to be mastered for everyone involved in software development processes.
@@ -9,6 +11,27 @@ Source control management (SCM) refers to tools that help you keep track of your
 
 - How to share the work?
 - How to keep track of changes and its authors?
+
+## Semantic Versioning (SemVer)
+
+![SemVer](image/semver.png)
+
+Format: `MAJOR.MINOR.PATCH-LABEL`
+
+`MAJOR` - version when you make incompatible API changes,
+`MINOR` - version when you add functionality in a backwards compatible manner, and
+`PATCH` - version when you make backwards compatible bug fixes.
+`LABEL` - for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
+
+Examples:
+
+```
+2.3.1
+1.0.0-alpha
+1.3.0-beta
+```
+
+[Read more about SemVer](https://semver.org/)
 
 ## History
 

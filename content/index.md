@@ -1,6 +1,3 @@
----
-duration: 3 hours
----
 
 # Source Control Management (SCM)
 

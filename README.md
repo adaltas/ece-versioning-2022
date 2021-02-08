@@ -9,6 +9,3 @@ Fast links:
 - [content in Markdown](content/index.md)
 - [lab](content/lab.md)
 - [homework](content/homework.md)
-
-<!-- there was a change -->
-This is a change from LOCAL

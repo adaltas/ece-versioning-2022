@@ -12,6 +12,7 @@ This workshop can be done **in groups of 2-3 people**.
 3. Create a branch and navigate between branches
 4. Modify a file in the repository and push the modifications
 5. Manage conflicts
+6. Redo the lab using command line interface (CLI)
 
 ## Before starting
 

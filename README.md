@@ -10,4 +10,5 @@ Fast links:
 - [lab](content/lab.md)
 - [homework](content/homework.md)
 
+<!-- there was a change -->
 This is a change from LOCAL

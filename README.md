@@ -9,5 +9,3 @@ Fast links:
 - [content in Markdown](content/index.md)
 - [lab](content/lab.md)
 - [homework](content/homework.md)
-
-Something new.

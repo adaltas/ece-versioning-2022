@@ -17,7 +17,7 @@ This workshop can be done **in groups of 2-3 people**.
 
 1. Create a GitHub account: https://github.com/
 2. Install GitHub Desktop from this url: https://desktop.github.com/
-3. Install an IDE or text editor (ex: https://code.visualstudio.com/ or https://atom.io/)
+3. Install an IDE or a text editor (ex: https://code.visualstudio.com/ or https://atom.io/)
 
 ## 1. Perform the GitHub Desktop Tutorial
 
@@ -30,7 +30,7 @@ This workshop can be done **in groups of 2-3 people**.
 
 **A single member** of the group creates a repository:
 
-1. Log in to [Github.com](https://github.com/)
+1. Login to [Github.com](https://github.com/)
 2. Navigate to the **"Your repositories"** page
 3. Click on **"New"**
   - Choose a name
@@ -124,9 +124,8 @@ You can find a detailed list of the different Git CLI commands:
 
 ## Bonus tasks
 
-1. Add multiple remotes (reference [here](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes))
-2. Squashing commits (reference [here](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History) and [here](https://stackoverflow.com/questions/5189560/squash-my-last-x-commits-together-using-git))
-3. Reverting history (reference [here](https://gist.github.com/gunjanpatel/18f9e4d1eb609597c50c2118e416e6a6) and [here](https://stackoverflow.com/questions/1270514/undoing-a-git-push))
-4. Rebasing (reference [here](https://git-scm.com/book/en/v2/Git-Branching-Rebasing))
-5. Cherry-picking (reference [here](https://git-scm.com/docs/git-cherry-pick) and [here](https://git-scm.com/docs/git-cherry-pick))
-6. Learn Monorepos in Git (reference [here](https://www.atlassian.com/git/tutorials/monorepos))
+1. Learn [the difference between merge and rebase](https://dzone.com/articles/merging-vs-rebasing)
+2. Learn [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.2/) - a specification for adding human and machine readable meaning to commit messages.
+3. Learn **squashing** commits (reference [here](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History) and [here](https://stackoverflow.com/questions/5189560/squash-my-last-x-commits-together-using-git))
+4. Learn [adding multiple remotes](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes)
+5. Learn [Monorepos in Git](https://www.atlassian.com/git/tutorials/monorepos)

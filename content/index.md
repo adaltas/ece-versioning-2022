@@ -1,16 +1,15 @@
 
 ![Versioning](image/versioning.png)
 
-# Source Control Management (SCM)
+# Source Control Management
 
-Source control management (or an interchangeable term "version control") has made a surge of collaborative work and software delivery increasingly rapid. It is now standard in software development to maintain a single source of truth for development teams, which allows multiple developers to work on the same codebase. Git, as a leader outclassing other SCM tools, is obligatory to be mastered for everyone involved in software development processes.
+ **Source Control** (also known as **Version Control**, or simply **Versioning**) - is the practice of tracking and managing changes to software code. 
 
-Source control management (SCM) refers to tools that help you keep track of your code with a complete history of changes.
+**Source Control Management (SCM)** refers to tools that help you keep track of your code with a complete history of changes.
 
-## Why SCM?
+It is now a standard in software development to maintain a **single source of truth** for development teams, which allows multiple developers to work on the same codebase.
 
-- How to share the work?
-- How to keep track of changes and its authors?
+**Git**, as a leader outclassing other SCM tools, is obligatory to be mastered for everyone involved in software development processes.
 
 ## Semantic Versioning (SemVer)
 
@@ -18,20 +17,25 @@ Source control management (SCM) refers to tools that help you keep track of your
 
 Format: `MAJOR.MINOR.PATCH-LABEL`
 
-`MAJOR` - version when you make incompatible API changes,
-`MINOR` - version when you add functionality in a backwards compatible manner, and
-`PATCH` - version when you make backwards compatible bug fixes.
-`LABEL` - for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
+- `MAJOR` - version when you make incompatible API changes
+- `MINOR` - version when you add functionality in a backwards compatible manner
+- `PATCH` - version when you make backwards compatible bug fixes
+- `LABEL` - for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format
 
 Examples:
 
 ```
 2.3.1
 1.0.0-alpha
-1.3.0-beta
+1.0.0-beta
 ```
 
 [Read more about SemVer](https://semver.org/)
+
+## Why SCM?
+
+- How to share the work?
+- How to keep track of changes and its authors?
 
 ## History
 
@@ -50,24 +54,28 @@ Examples:
 
 ## SCM types
 
-### Centralized
+**1. Centralized:**
 
   - has a single central repository
   - single point of failure
   - requires a network to inspect a history
   
-**Examples:** Tortoise SVN
+Examples: Tortoise SVN
 
-### Distributed
+**1. Distributed:**
 
   - local repository with full history
   - independent work
 
-**Examples:** Git, Mercurial SCM
+Examples: Git, Mercurial SCM
+
+## Git
+
+- outclasses other SCM
+- open source (free)
+- created in 2005 by Linus Torvalds
 
 ## Git: concepts
-
-Learn git - https://git-scm.com/doc
 
 - **Git Project**
 - Each set of changes to files are **commits**
@@ -78,11 +86,14 @@ Learn git - https://git-scm.com/doc
 - Sending changes to the repo is **pushing**
 - When choosing what to commit, files are **staged**
 
-## Git: branches
+[Official Git documentation](https://git-scm.com/doc)
 
-- **Branches** - independent set of commits
-- So far all commits are on the **master** branch
-- Branch can be an abstraction for line of development
+## Git: branching
+
+**Branch** - independent set of commits
+
+- So far all commits are on the **master** branch (or **main**)
+- Branch can be an abstraction for line of development:
   - **master** is the stable, tested version of the project
   - **develop** is the place where features come together
   - **feature** is the branch for a single feature

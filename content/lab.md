@@ -128,5 +128,3 @@ You can find a detailed list of the different Git CLI commands:
 1. Learn [the difference between merge and rebase](https://dzone.com/articles/merging-vs-rebasing)
 2. Learn [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.2/) - a specification for adding human and machine readable meaning to commit messages.
 3. Learn **squashing** commits (reference [here](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History) and [here](https://stackoverflow.com/questions/5189560/squash-my-last-x-commits-together-using-git))
-4. Learn [adding multiple remotes](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes)
-5. Learn [Monorepos in Git](https://www.atlassian.com/git/tutorials/monorepos)

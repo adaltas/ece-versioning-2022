@@ -5,7 +5,6 @@ Duration: 3 hours
 
 Fast links:
 
-- [slides](content/slides.pdf)
-- [content in Markdown](content/index.md)
-- [lab](content/lab.md)
-- [homework](content/homework.md)
+- [Content in Markdown](content/index.md)
+- [Lab work](content/lab.md)
+- [Homework](content/homework.md)

@@ -1,15 +1,43 @@
 
-![Versioning](image/versioning.png)
+![Versioning](image/git-logo.png)
 
-# Source Control Management
+# Versioning with Git
 
- **Source Control** (also known as **Version Control**, or simply **Versioning**) - is the practice of tracking and managing changes to software code. 
+## Objectives
 
-**Source Control Management (SCM)** refers to tools that help you keep track of your code with a complete history of changes.
+Today, we will do:
+
+- Learn what is versioning
+- Git introduction
+- Lab: Git basics
+
+## What is versioning?
+
+Also known as:
+
+- Version Control or Version Control System (VCS)
+- Source Control Management (SCM)
+
+## What is versioning?
+
+**It is the practice of tracking and managing changes to software code.**
+
+**Version Control System (VCS)** (or **Source Control Management (SCM)**) - tools that help you keep track of your code with a complete history of changes.
 
 It is now a standard in software development to maintain a **single source of truth** for development teams, which allows multiple developers to work on the same codebase.
 
-**Git**, as a leader outclassing other SCM tools, is obligatory to be mastered for everyone involved in software development processes.
+## Why VCS?
+
+- How to share the work?
+- How to keep track of changes and their authors?
+
+## What do you manage with VCS?
+
+- Source code, or any **text-based** documents
+- Project versions
+  - Global project version (**tags**, like `1.2.4-beta`)
+  - Each modification is a version!
+- Change requests ("Pull requests" in GitHub)
 
 ## Semantic Versioning (SemVer)
 
@@ -17,10 +45,10 @@ It is now a standard in software development to maintain a **single source of tr
 
 Format: `MAJOR.MINOR.PATCH-LABEL`
 
-- `MAJOR` - version when you make incompatible API changes
-- `MINOR` - version when you add functionality in a backwards compatible manner
-- `PATCH` - version when you make backwards compatible bug fixes
-- `LABEL` - for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format
+- `MAJOR` - when you make incompatible API changes
+- `MINOR` - when you add functionality in a backward-compatible manner
+- `PATCH` - when you make backward-compatible bug fixes
+- `LABEL` - optional, for pre-release and build metadata (extension to the MAJOR.MINOR.PATCH format)
 
 Examples:
 
@@ -32,123 +60,189 @@ Examples:
 
 [Read more about SemVer](https://semver.org/)
 
-## Why SCM?
+## What types of VCS?
 
-- How to share the work?
-- How to keep track of changes and its authors?
+- Centralized
+- Distributed
 
-## History
+## Centralized VCS
 
-- The concept started with engineering   
-  **Drawing and project offices evolved a robust system for dealing with engineering processes, and thus were born the fledgling change control and release systems.**
-- Modern implementation in software development since ~1980
-- Git started in 2005
+![Centralized](image/centralized.png)
 
-## What do you manage?
-
-- Code, or any **text based** projects (like all the configurations needed for the project)
-- Manage project versions
-  - Global project version (tags)
-  - Each modification is a «version»
-- Change requests
-
-## SCM types
-
-**1. Centralized:**
-
-  - has a single central repository
-  - single point of failure
-  - requires a network to inspect a history
+- Has a single central database (repository)
+- Single point of failure
+- Requires a network to inspect a history
   
-Examples: Tortoise SVN
+Examples: Apache Subversion (SVN)
 
-**1. Distributed:**
+## Distributed VCS
 
-  - local repository with full history
-  - independent work
+![Distributed](image/distributed.png)
+
+- Local database (repository) with the full history
+- Independent work
 
 Examples: Git, Mercurial SCM
 
-## Git
+## What is Git?
 
-- outclasses other SCM
-- open source (free)
-- created in 2005 by Linus Torvalds
+- The most popular VCS
+- Distributed
+- Open Source and free
+- Created in 2005 by Linus Torvalds
 
-## Git: concepts
+## Why learn Git?
 
-- **Git Project**
-- Each set of changes to files are **commits**
+- Git outclasses other SCM tools
+- Git is obligatory to be mastered for everyone involved in software development processes
+
+![Git outclasses other SCM tools](image/vcs-popularity.png)
+
+The information is from ["State of software development in 2019", codingsans.com](https://codingsans.com/state-of-software-development-2019).
+
+## Git: Ecosystem
+
+- Client tools:
+  - `git` CLI (command-line interface)
+  - GitHub Desktop
+  - GitKraken
+  - Sourcetree
+  - Fork
+  - etc...
+- Repository hosting services:
+  - GitHub
+  - GitLab
+  - Bitbucket
+  - etc...
+
+## Git: Basic concepts
+
+- The Git project:
+  - on your computer - **local repository**
+  - in a remote location - **remote repository**
+- Each set of changes to files in the history is a **commit**
+- When choosing what to commit, files are **staged**
 - Each commit has a **parent commit** (except for the first one)
 - The current commit is the **HEAD**
-- The git project is kept in a remote location - **repository**
-- Retrieving changes from the repo is **pulling**
-- Sending changes to the repo is **pushing**
-- When choosing what to commit, files are **staged**
+- Retrieving commits from the remote repository is **pulling**
+- Sending commits to the remote repository is **pushing**
 
 [Official Git documentation](https://git-scm.com/doc)
 
-## Git: branching
+## Git: Repository
 
-**Branch** - independent set of commits
+- It is the `.git/` folder inside a project
+- It tracks all changes made to files in your project
+- It stores the entire history of changes
+- Can be **local** and **remote**
 
-- So far all commits are on the **master** branch (or **main**)
-- Branch can be an abstraction for line of development:
-  - **master** is the stable, tested version of the project
-  - **develop** is the place where features come together
-  - **feature** is the branch for a single feature
+> Note! If you delete the `.git/` folder, then you delete your project’s history.
 
-Branch can be temporary:
+## Git: Common usage scenario
+
+1. Checking out remote changes:   
+  `git clone` (very first time) or `git pull` (always afterward)
+2. Editing a file:   
+  E.g.: add a new function `attack()` to the `player.js` file
+3. Adding a file to "staging area" for the next **commit**:   
+  `git add player.js`
+4. Commit the modification to the **local repository**:   
+  `git commit -m "Add player attack"`
+5. Send local modifications to the **remote repository**:   
+  `git push`
+6. Resolution of any **conflicts**:   
+  File modification and commiting again (starting from step 3)
+
+> Note! If you start a project from scratch you do `git init` to create a new repository
+
+## Git: Branching
+
+- **Branch** is an independent set of commits
+- What makes Git so popular (it fits best to Agile and DevOps)
+- Branch can be an abstraction for a line of development:
+  - `master` (or `main`) is the first and default one, used to keep the stable and tested version of the project
+  - `develop` is the place where features come together before merging to `master`
+  - `feature_X` is a branch for a single feature "X"
+- Branch can be temporary:
   - To have a change request
   - To develop an independent feature
     
 ![Git branches](image/git_branch.png)
 
-- Create branches or switch between them with `git branch`
+## Git: Merging branches
 
-## Git: tags
+- The branches are **merged** to have all the changes in only one branch (eventually in `master`)
+- When changes conflict with each other, the merge fails:   
+  ```
+  Automatic merge failed; fix conflicts and then commit the result.
+  ```
+
+![Merging branches](image/merging-branches.png)
+
+## Git: Resolving conflicts
+
+- **Conflicts** are changes made on the same part of the same file in two branches
+- Must be resolved manually:
+  - edit files with a resolver tool (or text editor)
+  - commit the files
+  - push to the **remote branch**
+
+## Now, it is a time for the lab work!
+
+Pause reading here, do the [lab work](./lab.md), and come back later!
+
+## Git: `.gitignore`
+
+- The `.gitignore` file contains the files to be ignored by Git
+- Works with [wildcards](https://en.wikipedia.org/wiki/Wildcard_character)   
+  Eg: `.*` - ignore all files starting with a `.`
+- Useful for ignoring files specific to your local development environment: 
+  - Codeblocks or VScode configuration files
+  - `./node_modules` folder in Node.js
+
+## Git: Tagging
 
 So far:
 
-- changes are managed, not the project
+- changes are managed, but not the project
 - all the commits come one after the other
-- the only version available is the commit id
+- the only version available is the commit ID
 
 **Tagging** versions:
 
 - Tag a **commit** to be a particular software version
-- Easier to identify the versions
-- You have to **push** the tags
+- It is easier to identify the versions
+- You must **push** tags to the remote repository in the same way as commits
 
-## Git: merge & conflicts
-
-- Branches can be merged to have all the changes in only one branch
-- When multiple changes are in conflict with each other, the merge fails: `Automatic merge failed; fix conflicts and then commit the result.`
-- Solutions:
-  - Cherrypick the changes (can be quite long)
-  - Abandon your changes (and put them back later)
-  - Work on the latest commit (git pull) and have a good task repartition
-
-## Git: merge vs rebase
+## Git best practices: use rebase instead of merge
 
 ![Merge vs Rebase](image/merge-vs-rebase.png)
 
-Read this [article on Medium](https://medium.com/datadriveninvestor/git-rebase-vs-merge-cc5199edd77c).
+[Read this article](https://medium.com/datadriveninvestor/git-rebase-vs-merge-cc5199edd77c).
 
-## OpenSource Project Management
+## Git best practices: Conventional Commits
 
-- Code managed by git, how can people contribute?
-- **Fork** the project on your account
-- Work on a change on your fork
-- Ask for your changes to be added to the official code - [pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests)
+- It is a specification for writing commit messages
+- The commit message should be structured as follows:
+  ```
+  <type>[optional scope]: <description>
 
-## Project management with GitLab
+  [optional body]
 
-Provides from basic issue tracking to scrum and kanban style
+  [optional footer]
+  ```
+- Learn more [here](https://www.conventionalcommits.org/en/v1.0.0-beta.2/)
 
-- Track and manage issues 
-- Issue boards to visualize work
-- Agile project management
-- DevOps pipeline traceability
+## Where can you use Git?
 
-[Read more about GitLab project management](https://about.gitlab.com/solutions/project-management/).
+- Software development
+- Writing (books, articles, theses)
+- Whatever requires tracking the history...
+
+## Open-source project management
+
+How to contribute to an open-source project on GitHub?
+
+1. **Fork** a repository to your account
+2. Work on a change on your fork
+3. Ask for your changes to be added to the original repository by creating a [pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests)

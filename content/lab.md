@@ -1,11 +1,11 @@
 
 # Lab
 
-Introduction to Git
+This lab work covers the basics of Git.
 
 ## Objectives
 
-This workshop can be done **in groups of 2-3 people**.
+This lab work can be done in a group of **2 students**.
 
 1. Perform the GitHub Desktop Tutorial
 2. Create a repository and clone it on your computer
@@ -125,6 +125,8 @@ You can find a detailed list of the different Git CLI commands:
 
 ## Bonus tasks
 
-1. Learn [the difference between merge and rebase](https://dzone.com/articles/merging-vs-rebasing)
-2. Learn [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.2/) - a specification for adding human and machine readable meaning to commit messages.
-3. Learn **squashing** commits (reference [here](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History) and [here](https://stackoverflow.com/questions/5189560/squash-my-last-x-commits-together-using-git))
+1. [Learn `.gitignore`](https://git-scm.com/docs/gitignore)
+2. [Learn tagging](https://git-scm.com/book/en/v2/Git-Basics-Tagging)
+3. [Learn "rebase" vs "merge"](https://medium.datadriveninvestor.com/git-rebase-vs-merge-cc5199edd77c)
+4. [Learn Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.2/)
+5. [Learn squashing commits](https://medium.com/the-mighty-programmer/squashing-git-commits-4b53fe1c138e)

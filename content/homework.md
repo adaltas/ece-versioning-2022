@@ -9,5 +9,6 @@ This is a recommended list of Git base concepts and best practices to learn in a
 4. [Learn tagging](https://git-scm.com/book/en/v2/Git-Basics-Tagging)
 5. [Learn "rebase" vs "merge"](https://medium.datadriveninvestor.com/git-rebase-vs-merge-cc5199edd77c)
 6. [Learn Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.2/)
+7. [Learn squashing commits](https://medium.com/the-mighty-programmer/squashing-git-commits-4b53fe1c138e)
 
 Read the [Pro Git book](https://git-scm.com/book/en/v2) to become a Git professional!
